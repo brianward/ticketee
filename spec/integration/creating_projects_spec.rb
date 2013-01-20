@@ -13,7 +13,7 @@ feature 'Creating Projects' do
     
     project = Project.find_by_name("TextMate 2")
     page.current_url.should == project_url(project)
-    title = "TextMate 2 - Projects - Ticketee'
+    title = "TextMate 2 - Projects - Ticketee"
     find("title").should have_content(title)
   end
 
@@ -22,5 +22,5 @@ feature 'Creating Projects' do
     page.should have_content("Project has not been created.")
     page.should have_content("Name can't be blank")
   end 
-  
+
 end
