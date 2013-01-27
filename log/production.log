@@ -1,0 +1,26 @@
+Compiled jquery.js  (2ms)  (pid 32992)
+Compiled jquery_ujs.js  (0ms)  (pid 32992)
+Compiled projects.js  (99ms)  (pid 32992)
+Compiled application.js  (128ms)  (pid 32992)
+Compiled application.css  (0ms)  (pid 32992)
+Compiled jquery.js  (2ms)  (pid 32992)
+Compiled jquery_ujs.js  (0ms)  (pid 32992)
+Compiled projects.js  (102ms)  (pid 32992)
+Compiled application.js  (128ms)  (pid 32992)
+Compiled application.css  (0ms)  (pid 32992)
+Connecting to database specified by database.yml
+Migrating to CreateProjects (20130120230123)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-01-27 09:35:41 -0800
+Processing by ProjectsController#index as HTML
+  Rendered projects/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 66ms (Views: 36.7ms | ActiveRecord: 2.2ms)
+Started GET "/projects/not-here" for 127.0.0.1 at 2013-01-27 09:36:01 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"not-here"}
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Project with id=not-here):
+  app/controllers/projects_controller.rb:38:in `show'
+
+
