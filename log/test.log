@@ -1918,3 +1918,97 @@ Redirected to http://test.host/projects
 Filter chain halted as :find_project rendered or redirected
 Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
   [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (5.0ms)[0m  [1mINSERT INTO "projects" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Mon, 04 Feb 2013 05:20:28 UTC +00:00], ["description", nil], ["name", "Example project"], ["updated_at", Mon, 04 Feb 2013 05:20:28 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "tickets" ("created_at", "description", "project_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Mon, 04 Feb 2013 05:20:28 UTC +00:00], ["description", "An example ticket, nothing more"], ["project_id", 1], ["title", "Example ticket"], ["updated_at", Mon, 04 Feb 2013 05:20:28 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by ProjectsController#index as HTML
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered projects/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+Started GET "/projects/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1
+  Rendered projects/show.html.erb within layouts/application (53.7ms)
+Completed 200 OK in 58ms (Views: 55.7ms | ActiveRecord: 0.3ms)
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tickets/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+Started GET "/projects/1/tickets/1/edit" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#edit as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tickets/_form.html.erb (8.5ms)
+  Rendered tickets/edit.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.1ms)
+Started PUT "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#update as HTML
+  Parameters: {"utf8"=>"✓", "ticket"=>{"title"=>"", "description"=>"\nAn example ticket, nothing more"}, "commit"=>"Update Ticket", "project_id"=>"1", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered tickets/_form.html.erb (3.8ms)
+  Rendered tickets/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (2.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "projects" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Mon, 04 Feb 2013 05:20:29 UTC +00:00], ["description", nil], ["name", "Example project"], ["updated_at", Mon, 04 Feb 2013 05:20:29 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tickets" ("created_at", "description", "project_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Mon, 04 Feb 2013 05:20:29 UTC +00:00], ["description", "An example ticket, nothing more"], ["project_id", 1], ["title", "Example ticket"], ["updated_at", Mon, 04 Feb 2013 05:20:29 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by ProjectsController#index as HTML
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.1ms)
+Started GET "/projects/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1[0m
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.1ms)
+Started GET "/projects/1/tickets/1/edit" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#edit as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered tickets/_form.html.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.1ms)
+Started PUT "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#update as HTML
+  Parameters: {"utf8"=>"✓", "ticket"=>{"title"=>"Make it really shiny!", "description"=>"\nAn example ticket, nothing more"}, "commit"=>"Update Ticket", "project_id"=>"1", "id"=>"1"}
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.0ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mUPDATE "tickets" SET "title" = 'Make it really shiny!', "description" = '
+An example ticket, nothing more', "updated_at" = '2013-02-04 05:20:29.386714' WHERE "tickets"."id" = 1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/projects/1/tickets/1
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-03 21:20:29 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.0ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
