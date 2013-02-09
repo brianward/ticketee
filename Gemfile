@@ -9,7 +9,6 @@ gem 'dynamic_form', '1.1.4'
 gem 'sqlite3'
 gem 'devise', '2.1.0.rc'
 
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -26,6 +25,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.11'
+  gem 'email_spec', '1.2.1'
 end
 
 group :test do
