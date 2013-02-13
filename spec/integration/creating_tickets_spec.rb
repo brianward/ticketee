@@ -3,14 +3,14 @@ feature "Creating Tickets" do
 
   before do
     Factory(:project, :name => "Internet Explorer")
-    user = Factory(:user, :email => "ticketee@example.com")
-    user.confirm!
+    @user = Factory(:user)
+    @user.confirm!
     visit '/'
     click_link "Internet Explorer"
     click_link "New Ticket"
     message = "You need to sign in or sign up before continuing."
     page.should have_content(message)
-    fill_in "Email", :with => "ticketee@example.com"
+    fill_in "Email", :with => @user.email
     fill_in "Password", :with => "password"
     click_button "Sign in"
     within("h2") { page.should have_content("New Ticket") }
@@ -22,7 +22,7 @@ feature "Creating Tickets" do
     click_button "Create Ticket"
     page.should have_content("Ticket has been created.")
     within("#ticket #author") do
-      page.should have_content("Created by ticketee@example.com")
+      page.should have_content("Created by #{@user.email}")
     end
   end
 
