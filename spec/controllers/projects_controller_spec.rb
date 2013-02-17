@@ -1,13 +1,14 @@
 require 'spec_helper'
 describe ProjectsController do
   let(:user) { Factory(:confirmed_user) }
+  let(:admin) { Factory(:admin_user) }
   let(:project) { mock_model(Project, :id => 1) }
 
   context "standard users" do
     before do
       sign_in(:user, user)
     end
-    
+
     it "cannot access the new action" do
       get :new
       response.should redirect_to(root_path)

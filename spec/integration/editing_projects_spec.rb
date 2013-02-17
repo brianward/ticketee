@@ -1,6 +1,8 @@
 require 'spec_helper'
-
 feature "Editing Projects" do
+  let(:user) { Factory(:confirmed_user) }
+  let(:admin) { Factory(:admin_user) }
+
   before do
     sign_in_as!(Factory(:admin_user))
     Factory(:project, :name => "TextMate 2")

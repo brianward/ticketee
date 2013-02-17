@@ -1,5 +1,8 @@
 require 'spec_helper'
 feature 'Creating Projects' do
+  let(:user) { Factory(:confirmed_user) }
+  let(:admin) { Factory(:admin_user) }
+
   before do
     sign_in_as!(Factory(:admin_user))
     visit root_path
