@@ -14110,3 +14110,134 @@ Processing by ProjectsController#create as HTML
   Rendered projects/_form.html.erb (3.4ms)
 Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.2ms)
   [1m[35m (1.9ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ticketee@email.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'sSy74nNNC778T2TfscQH' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("admin", "confirmation_sent_at", "confirmation_token", "confirmed_at", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "unconfirmed_email", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["confirmation_sent_at", Sun, 17 Feb 2013 22:50:18 UTC +00:00], ["confirmation_token", "sSy74nNNC778T2TfscQH"], ["confirmed_at", nil], ["created_at", Sun, 17 Feb 2013 22:50:18 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "ticketee@email.com"], ["encrypted_password", "$2a$10$sul1VWmMM4.V.FLkZOU4pO/GRhLqjZCEqOZPr/xrxcFobBWjqcVW2"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["unconfirmed_email", nil], ["updated_at", Sun, 17 Feb 2013 22:50:18 UTC +00:00]]
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/mailer/confirmation_instructions.html.erb (3.2ms)
+
+Sent mail to ticketee@email.com (20ms)
+Date: Sun, 17 Feb 2013 14:50:18 -0800
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ticketee@email.com
+Message-ID: <51215eaa69d49_df7c3fed54434cd093232@Brians-MacBook-Air-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ticketee@email.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=sSy74nNNC778T2TfscQH">Confirm my account</a></p>
+
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "confirmation_token" = NULL, "confirmed_at" = '2013-02-17 22:50:18.443541', "updated_at" = '2013-02-17 22:50:18.444420' WHERE "users"."id" = 1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ticketee@email.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'pTa4zuxwUqzGeyJRR1rN' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("admin", "confirmation_sent_at", "confirmation_token", "confirmed_at", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "unconfirmed_email", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["confirmation_sent_at", Sun, 17 Feb 2013 22:51:09 UTC +00:00], ["confirmation_token", "pTa4zuxwUqzGeyJRR1rN"], ["confirmed_at", nil], ["created_at", Sun, 17 Feb 2013 22:51:09 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "ticketee@email.com"], ["encrypted_password", "$2a$10$C1qPYFWYEiM8HmmjQRwPGOlQpBFt2bc6BxiXbDG53O59GX9DNlCi2"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["unconfirmed_email", nil], ["updated_at", Sun, 17 Feb 2013 22:51:09 UTC +00:00]]
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/mailer/confirmation_instructions.html.erb (3.2ms)
+
+Sent mail to ticketee@email.com (20ms)
+Date: Sun, 17 Feb 2013 14:51:10 -0800
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ticketee@email.com
+Message-ID: <51215ede6889_df7d3fc7ddc34cd8594e@Brians-MacBook-Air-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ticketee@email.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=pTa4zuxwUqzGeyJRR1rN">Confirm my account</a></p>
+
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "confirmation_token" = NULL, "confirmed_at" = '2013-02-17 22:51:10.037678', "updated_at" = '2013-02-17 22:51:10.038555' WHERE "users"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ticketee@email.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'cr2JSGwShqQ6mpytQ14G' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("admin", "confirmation_sent_at", "confirmation_token", "confirmed_at", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "unconfirmed_email", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["confirmation_sent_at", Sun, 17 Feb 2013 23:13:19 UTC +00:00], ["confirmation_token", "cr2JSGwShqQ6mpytQ14G"], ["confirmed_at", nil], ["created_at", Sun, 17 Feb 2013 23:13:19 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "ticketee@email.com"], ["encrypted_password", "$2a$10$6EYf/Crj9lnLM4IuNYT1eesO51rcTN1XyZMwUtNBJSWpRyRuZ5bRy"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["unconfirmed_email", nil], ["updated_at", Sun, 17 Feb 2013 23:13:19 UTC +00:00]]
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/mailer/confirmation_instructions.html.erb (3.3ms)
+
+Sent mail to ticketee@email.com (19ms)
+Date: Sun, 17 Feb 2013 15:13:19 -0800
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ticketee@email.com
+Message-ID: <5121640f2f89e_dfe43ff838c34cd4623c3@Brians-MacBook-Air-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ticketee@email.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=cr2JSGwShqQ6mpytQ14G">Confirm my account</a></p>
+
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "confirmation_token" = NULL, "confirmed_at" = '2013-02-17 23:13:19.204324', "updated_at" = '2013-02-17 23:13:19.205193' WHERE "users"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'ticketee@email.com' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."confirmation_token" = 'ARUn7XdFsbEWp9ekQcqA' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("admin", "confirmation_sent_at", "confirmation_token", "confirmed_at", "created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "unconfirmed_email", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["admin", false], ["confirmation_sent_at", Sun, 17 Feb 2013 23:16:21 UTC +00:00], ["confirmation_token", "ARUn7XdFsbEWp9ekQcqA"], ["confirmed_at", nil], ["created_at", Sun, 17 Feb 2013 23:16:21 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "ticketee@email.com"], ["encrypted_password", "$2a$10$x8vzB0V/WJFpuaa4JJlNCu6Ls23lRpIFRC/JBBvK2UIRCqaMnU8/a"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["unconfirmed_email", nil], ["updated_at", Sun, 17 Feb 2013 23:16:21 UTC +00:00]]
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/mailer/confirmation_instructions.html.erb (3.3ms)
+
+Sent mail to ticketee@email.com (19ms)
+Date: Sun, 17 Feb 2013 15:16:21 -0800
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: ticketee@email.com
+Message-ID: <512164c5ef838_dff33ff95c834ce0818dc@Brians-MacBook-Air-2.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome ticketee@email.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=ARUn7XdFsbEWp9ekQcqA">Confirm my account</a></p>
+
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "confirmation_token" = NULL, "confirmed_at" = '2013-02-17 23:16:21.990890', "updated_at" = '2013-02-17 23:16:21.991731' WHERE "users"."id" = 1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.4ms)[0m  rollback transaction
