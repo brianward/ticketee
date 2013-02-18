@@ -21,6 +21,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    
   end
 
   def update
@@ -38,6 +39,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+
   end
 
   def destroy
@@ -47,12 +49,11 @@ class ProjectsController < ApplicationController
   end
 
   private
-
-  def find_project
-    @project = Project.find(params[:id])
-    rescue ActiveRecord::RecordNotFound
-    flash[:alert] = "The project you were looking" +
-                    " for could not be found."
-    redirect_to projects_path
-  end
+    def find_project
+      @project = Project.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      flash[:alert] = "The project you were looking" +
+                      " for could not be found."
+      redirect_to projects_path
+    end
 end
