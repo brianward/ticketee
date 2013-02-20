@@ -26,7 +26,7 @@ feature "Creating Users" do
   end
 
   scenario "Creating an admin user" do
-    fill_in "Email", :with => "admin@example.com"
+    fill_in "Email", :with => "adminx@example.com"
     fill_in "Password", :with => "password"
     check "Is an admin?"
     click_button "Create User"
