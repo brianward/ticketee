@@ -1,19 +1,21 @@
 Ticketee::Application.routes.draw do
-  
+
   get "admin/users/index"
 
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
-    namespace :admin do
-      root :to => "base#index"
-      resources :users
-    end
+  get '/awaiting_confirmation', :to => "users#confirmation", :as => 'confirm_user'
 
-    resources :projects do
-      resources :tickets
-    end
+  namespace :admin do
+    root :to => "base#index"
+    resources :users
+  end
 
-    root :to => "projects#index"
+  resources :projects do
+    resources :tickets
+  end
+
+  root :to => "projects#index"
 
 
   # The priority is based upon order of creation:
