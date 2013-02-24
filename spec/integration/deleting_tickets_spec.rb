@@ -40,7 +40,6 @@ feature 'Deleting tickets' do
   end
 
   context "admin users" do
-    sign_in_as!(Factory(:admin_user))
     scenario "New ticket link is shown to admins" do
       visit project_path(project)
       assert_link_for "New Ticket"
