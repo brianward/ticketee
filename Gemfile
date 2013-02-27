@@ -27,6 +27,9 @@ gem 'jquery-rails'
 group :test, :development do
   gem 'rspec-rails', '~> 2.11'
   gem 'email_spec', '1.2.1'
+  gem 'launchy'
+  gem 'awesome_print'
+  gem 'pry-rails'
 end
 
 group :test do

@@ -4272,3 +4272,3690 @@ Connecting to database specified by database.yml
   [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130209232742')
   [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130209235950')[0m
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130217064114')
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-26 18:46:09 -0800
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered projects/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 226ms (Views: 104.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /admin/users.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /admin/permissions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /tickets.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:10 -0800
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.4ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1
+  Rendered projects/show.html.erb within layouts/application (84.4ms)
+Completed 200 OK in 95ms (Views: 91.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:12 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPermission Load (0.2ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  Rendered tickets/show.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 68ms (Views: 64.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:13 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  Rendered tickets/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 140ms (Views: 25.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:46:29 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tickets/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 128ms (Views: 16.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:03 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  Rendered tickets/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 27ms (Views: 22.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:14 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:47:25 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  Rendered tickets/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:25 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:26 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:26 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:26 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:26 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:26 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:47:26 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:48:16 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered tickets/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 91ms (Views: 15.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:48:17 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 18:52:47 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  Rendered tickets/show.html.erb within layouts/application (31.8ms)
+Completed 200 OK in 277ms (Views: 101.7ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /admin/permissions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /admin/users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 18:52:48 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProjects (20130120230123)
+Migrating to CreateTickets (20130204033443)
+Migrating to DeviseCreateUsers (20130209225252)
+Migrating to AddConfirmableFieldsToUsers (20130209232742)
+Migrating to AddUserIdToTickets (20130209235950)
+Migrating to AddAdminToUsers (20130217064114)
+Migrating to CreatePermissions (20130224161726)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateProjects (20130120230123)
+Migrating to CreateTickets (20130204033443)
+Migrating to DeviseCreateUsers (20130209225252)
+Migrating to AddConfirmableFieldsToUsers (20130209232742)
+Migrating to AddUserIdToTickets (20130209235950)
+Migrating to AddAdminToUsers (20130217064114)
+Migrating to CreatePermissions (20130224161726)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "permissions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "thing_id" integer, "thing_type" varchar(255), "action" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "tickets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_tickets_on_project_id" ON "tickets" ("project_id")[0m
+  [1m[35m (0.9ms)[0m  CREATE INDEX "index_tickets_on_user_id" ON "tickets" ("user_id")
+  [1m[36m (1.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255), "admin" boolean DEFAULT 'f') [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130224161726')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130120230123')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130204033443')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130209225252')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130209232742')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130209235950')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130217064114')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered projects/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 194ms (Views: 84.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /admin/permissions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /admin/users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:16 -0800
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/projects/1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1
+  Rendered projects/show.html.erb within layouts/application (78.4ms)
+Completed 200 OK in 89ms (Views: 85.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:21 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 19:58:26 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPermission Load (0.2ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  Rendered tickets/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 74ms (Views: 70.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:27 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/new" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Processing by TicketsController#new as HTML
+  Parameters: {"project_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered tickets/_form.html.erb (3.7ms)
+  Rendered tickets/new.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 20ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:58:32 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.2ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  Rendered tickets/show.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 139ms (Views: 25.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:17 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1/edit" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Processing by TicketsController#edit as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.1ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered tickets/_form.html.erb (3.0ms)
+  Rendered tickets/edit.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 19:59:20 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 19:59:47 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1  [["id", "1"]]
+#<Ticket:0x007fb27babdb98>
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  Rendered tickets/show.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 139ms (Views: 65.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/projects/1/tickets/1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Processing by TicketsController#show as HTML
+  Parameters: {"project_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTicket Load (0.2ms)[0m  [1mSELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 1 AND "tickets"."id" = ? LIMIT 1[0m  [["id", "1"]]
+#<Ticket:0x007fb27e020570> {
+             :id[0;37m => [0m[1;34m1[0m,
+          :title[0;37m => [0m[0;33m"new ticket 998"[0m,
+    :description[0;37m => [0m[0;33m"this is a new ticket 998"[0m,
+     :project_id[0;37m => [0m[1;34m1[0m,
+     :created_at[0;37m => [0m[0;32mSun, 24 Feb 2013 23:19:38 UTC +00:00[0m,
+     :updated_at[0;37m => [0m[0;32mSun, 24 Feb 2013 23:19:38 UTC +00:00[0m,
+        :user_id[0;37m => [0m[1;34m1[0m
+}
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  Rendered tickets/show.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 145ms (Views: 24.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:00:24 -0800
+Served asset /users.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:05:35 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 177ms (Views: 74.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:05:35 -0800
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:05:38 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:05:38 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at 2013-02-26 20:06:06 -0800
+Processing by Admin::UsersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered admin/users/_form.html.erb (4.0ms)
+  Rendered admin/users/new.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:06 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:06:10 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:10 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/edit" for 127.0.0.1 at 2013-02-26 20:06:11 -0800
+Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/users/_form.html.erb (3.6ms)
+  Rendered admin/users/edit.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:11 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:06:17 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 91ms (Views: 9.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:17 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:06:40 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:40 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:06:42 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:42 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:06:44 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:44 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:06:45 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 50ms (Views: 47.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:45 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:06:52 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:06:52 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:08:55 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:08:55 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:08:57 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:08:57 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:09:07 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered admin/base/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:09:07 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-26 20:09:10 -0800
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered projects/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:09:10 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/2" for 127.0.0.1 at 2013-02-26 20:09:12 -0800
+Processing by ProjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mTicket Load (0.1ms)[0m  SELECT "tickets".* FROM "tickets" WHERE "tickets"."project_id" = 2
+  Rendered projects/show.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 22ms (Views: 18.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:09:12 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/projects/2/tickets/new" for 127.0.0.1 at 2013-02-26 20:09:15 -0800
+Processing by TicketsController#new as HTML
+  Parameters: {"project_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" WHERE "projects"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered tickets/_form.html.erb (4.3ms)
+  Rendered tickets/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 25ms (Views: 13.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:09:15 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:10:19 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:20 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:10:21 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:10:22 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:22 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:10:23 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+[
+    [1;37m[0] [0m#<Project:0x007ffe56d0f460> {
+                 :id[0;37m => [0m[1;34m1[0m,
+               :name[0;37m => [0m[0;33m"Test Project"[0m,
+        :description[0;37m => [0m[0;33m"this is a test project"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m
+    },
+    [1;37m[1] [0m#<Project:0x007ffe56bc5fc8> {
+                 :id[0;37m => [0m[1;34m2[0m,
+               :name[0;37m => [0m[0;33m"Test again"[0m,
+        :description[0;37m => [0m[0;33m"test again again"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m
+    },
+    [1;37m[2] [0m#<Project:0x007ffe56ed0ce0> {
+                 :id[0;37m => [0m[1;34m3[0m,
+               :name[0;37m => [0m[0;33m"asdf"[0m,
+        :description[0;37m => [0m[0;33m"aasfasdf"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m
+    },
+    [1;37m[3] [0m#<Project:0x007ffe56ed01f0> {
+                 :id[0;37m => [0m[1;34m4[0m,
+               :name[0;37m => [0m[0;33m"Internet Explorer"[0m,
+        :description[0;37m => [0m[0;33m"description"[0m,
+         :created_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m
+    }
+]
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 84ms (Views: 8.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:23 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+#<Ability:0x007ffe5562b578>
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 115ms (Views: 8.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /admin/permissions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /admin/users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /projects.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:10:48 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:06 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:11:07 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:08 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+#<Ability:0x007ffe59b99e98>
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:11:09 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:11:41 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."thing_id" = 4 AND "permissions"."thing_type" = 'Project'
+Completed 401 Unauthorized in 542108ms
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:20:49 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" ORDER BY email
+  Rendered admin/users/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 183ms (Views: 78.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /admin/permissions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /tickets.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /admin/users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /projects.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:50 -0800
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:51 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:20:52 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 95ms (Views: 9.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:20:53 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:03 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:30 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+[
+    [1;37m[0] [0m#<Project:0x007fc4034d0070> {
+                 :id[0;37m => [0m[1;34m1[0m,
+               :name[0;37m => [0m[0;33m"Test Project"[0m,
+        :description[0;37m => [0m[0;33m"this is a test project"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m
+    },
+    [1;37m[1] [0m#<Project:0x007fc4037bc400> {
+                 :id[0;37m => [0m[1;34m2[0m,
+               :name[0;37m => [0m[0;33m"Test again"[0m,
+        :description[0;37m => [0m[0;33m"test again again"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m
+    },
+    [1;37m[2] [0m#<Project:0x007fc4037c2e18> {
+                 :id[0;37m => [0m[1;34m3[0m,
+               :name[0;37m => [0m[0;33m"asdf"[0m,
+        :description[0;37m => [0m[0;33m"aasfasdf"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m
+    },
+    [1;37m[3] [0m#<Project:0x007fc4037c5a28> {
+                 :id[0;37m => [0m[1;34m4[0m,
+               :name[0;37m => [0m[0;33m"Internet Explorer"[0m,
+        :description[0;37m => [0m[0;33m"description"[0m,
+         :created_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m
+    }
+]
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 122ms (Views: 9.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:22:50 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:23:15 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Completed 500 Internal Server Error in 107ms
+
+NoMethodError (undefined method `permissions' for #<Array:0x007fc406537970>):
+  app/controllers/admin/permissions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:23:24 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+Completed 500 Internal Server Error in 106ms
+
+NoMethodError (undefined method `permission' for #<Array:0x007fc4034a27b0>):
+  app/controllers/admin/permissions_controller.rb:7:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+[
+    [1;37m[0] [0m#<Project:0x007fc403f64a68> {
+                 :id[0;37m => [0m[1;34m1[0m,
+               :name[0;37m => [0m[0;33m"Test Project"[0m,
+        :description[0;37m => [0m[0;33m"this is a test project"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m
+    },
+    [1;37m[1] [0m#<Project:0x007fc4061357c8> {
+                 :id[0;37m => [0m[1;34m2[0m,
+               :name[0;37m => [0m[0;33m"Test again"[0m,
+        :description[0;37m => [0m[0;33m"test again again"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m
+    },
+    [1;37m[2] [0m#<Project:0x007fc406134e68> {
+                 :id[0;37m => [0m[1;34m3[0m,
+               :name[0;37m => [0m[0;33m"asdf"[0m,
+        :description[0;37m => [0m[0;33m"aasfasdf"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m
+    },
+    [1;37m[3] [0m#<Project:0x007fc406134760> {
+                 :id[0;37m => [0m[1;34m4[0m,
+               :name[0;37m => [0m[0;33m"Internet Explorer"[0m,
+        :description[0;37m => [0m[0;33m"description"[0m,
+         :created_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m
+    }
+]
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 118ms (Views: 8.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:39 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:26:53 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" ORDER BY email
+  Rendered admin/users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:53 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:26:54 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:54 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:26:55 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+[
+    [1;37m[0] [0m#<Project:0x007fc4085f7110> {
+                 :id[0;37m => [0m[1;34m1[0m,
+               :name[0;37m => [0m[0;33m"Test Project"[0m,
+        :description[0;37m => [0m[0;33m"this is a test project"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m
+    },
+    [1;37m[1] [0m#<Project:0x007fc4085f6af8> {
+                 :id[0;37m => [0m[1;34m2[0m,
+               :name[0;37m => [0m[0;33m"Test again"[0m,
+        :description[0;37m => [0m[0;33m"test again again"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m
+    },
+    [1;37m[2] [0m#<Project:0x007fc4085f64e0> {
+                 :id[0;37m => [0m[1;34m3[0m,
+               :name[0;37m => [0m[0;33m"asdf"[0m,
+        :description[0;37m => [0m[0;33m"aasfasdf"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m
+    },
+    [1;37m[3] [0m#<Project:0x007fc4085f5ec8> {
+                 :id[0;37m => [0m[1;34m4[0m,
+               :name[0;37m => [0m[0;33m"Internet Explorer"[0m,
+        :description[0;37m => [0m[0;33m"description"[0m,
+         :created_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m
+    }
+]
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 55ms (Views: 49.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:55 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" 
+[
+    [1;37m[0] [0m#<Project:0x007fc403e736e0> {
+                 :id[0;37m => [0m[1;34m1[0m,
+               :name[0;37m => [0m[0;33m"Test Project"[0m,
+        :description[0;37m => [0m[0;33m"this is a test project"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m
+    },
+    [1;37m[1] [0m#<Project:0x007fc403e76278> {
+                 :id[0;37m => [0m[1;34m2[0m,
+               :name[0;37m => [0m[0;33m"Test again"[0m,
+        :description[0;37m => [0m[0;33m"test again again"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m
+    },
+    [1;37m[2] [0m#<Project:0x007fc403e7c808> {
+                 :id[0;37m => [0m[1;34m3[0m,
+               :name[0;37m => [0m[0;33m"asdf"[0m,
+        :description[0;37m => [0m[0;33m"aasfasdf"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m
+    },
+    [1;37m[3] [0m#<Project:0x007fc403e7af30> {
+                 :id[0;37m => [0m[1;34m4[0m,
+               :name[0;37m => [0m[0;33m"Internet Explorer"[0m,
+        :description[0;37m => [0m[0;33m"description"[0m,
+         :created_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m
+    }
+]
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:26:56 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+[
+    [1;37m[0] [0m#<Project:0x007ff28bc96b18> {
+                 :id[0;37m => [0m[1;34m1[0m,
+               :name[0;37m => [0m[0;33m"Test Project"[0m,
+        :description[0;37m => [0m[0;33m"this is a test project"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:24:42 UTC +00:00[0m
+    },
+    [1;37m[1] [0m#<Project:0x007ff28ee96e38> {
+                 :id[0;37m => [0m[1;34m2[0m,
+               :name[0;37m => [0m[0;33m"Test again"[0m,
+        :description[0;37m => [0m[0;33m"test again again"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 20 Jan 2013 23:54:00 UTC +00:00[0m
+    },
+    [1;37m[2] [0m#<Project:0x007ff28ee96640> {
+                 :id[0;37m => [0m[1;34m3[0m,
+               :name[0;37m => [0m[0;33m"asdf"[0m,
+        :description[0;37m => [0m[0;33m"aasfasdf"[0m,
+         :created_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mSun, 03 Feb 2013 22:39:16 UTC +00:00[0m
+    },
+    [1;37m[3] [0m#<Project:0x007ff28ee95e70> {
+                 :id[0;37m => [0m[1;34m4[0m,
+               :name[0;37m => [0m[0;33m"Internet Explorer"[0m,
+        :description[0;37m => [0m[0;33m"description"[0m,
+         :created_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m,
+         :updated_at[0;37m => [0m[0;32mMon, 04 Feb 2013 04:53:46 UTC +00:00[0m
+    }
+]
+  Rendered admin/base/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 284ms (Views: 84.0ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /jquery.js - 200 OK (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /jquery_ujs.js - 200 OK (3ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /projects.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /admin/permissions.js - 200 OK (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /admin/users.js - 200 OK (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /tickets.js - 200 OK (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:23 -0800
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 122ms (Views: 9.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:27:45 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 9.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:28:05 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:30:24 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:17 -0800
+Served asset /users.js - 200 OK (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:31:54 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 260ms (Views: 81.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:54 -0800
+Served asset /jquery_ujs.js - 200 OK (7ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:55 -0800
+Served asset /admin/permissions.js - 200 OK (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:55 -0800
+Served asset /projects.js - 200 OK (3ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:55 -0800
+Served asset /tickets.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:55 -0800
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:55 -0800
+Served asset /admin/users.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:31:55 -0800
+Served asset /users.js - 200 OK (1ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /admin/users.js - 200 OK (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /admin/permissions.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /projects.js - 200 OK (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:04 -0800
+Served asset /users.js - 200 OK (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:32:39 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:39 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:32:41 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:41 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:32:42 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:42 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:32:43 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:43 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:32:45 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 233ms (Views: 45.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /jquery.js - 200 OK (41ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /admin/users.js - 200 OK (2ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /admin/permissions.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /projects.js - 200 OK (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /tickets.js - 200 OK (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:34:06 -0800
+Served asset /users.js - 200 OK (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:38:14 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 75ms (Views: 12.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:15 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:38:16 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (2.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:16 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:38:17 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.2ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 39ms (Views: 10.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:17 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:38:19 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 48ms (Views: 8.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:13 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:14 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:15 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 8.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:16 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:39:18 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:19 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 115ms (Views: 8.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:39:45 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:28 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 54ms (Views: 51.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:30 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Nfsw+9icqR9xLUHy7pSXvP+S4r5ms8VHYqf1fSouXFQ="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Processing by ProjectsController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/shared/_links.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/sessions/new.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:38 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-26 20:40:40 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1[0m
+Completed 401 Unauthorized in 4ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/shared/_links.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/sessions/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 339ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:41 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@admin.com' LIMIT 1
+Completed 401 Unauthorized in 2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"admin@admin.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/shared/_links.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/sessions/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 292ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:46 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"admin@ticketee.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@ticketee.com' LIMIT 1[0m
+Completed 401 Unauthorized in 1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"admin@ticketee.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/shared/_links.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p194@rubyfall2012/gems/devise-2.1.0.rc/app/views/devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 294ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:40:55 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8nJu2lFg4VS2A/yn1TD9N63f2mcAXD9ES8ALyu/YVic=", "user"=>{"email"=>"brianmatthewward@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'brianmatthewward@gmail.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2013-02-24 23:22:50.605264', "current_sign_in_at" = '2013-02-27 04:41:18.470245', "sign_in_count" = 5, "updated_at" = '2013-02-27 04:41:18.472506' WHERE "users"."id" = 1
+  [1m[36m (4.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 302ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Processing by ProjectsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered projects/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:18 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:21 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" ORDER BY email
+  Rendered admin/users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 12ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:22 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/2" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 8.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:24 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/2/permissions" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:25 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/2/permissions" for 127.0.0.1 at 2013-02-26 20:41:39 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:39 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:39 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:39 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:39 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:40 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:40 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:41:40 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/2/permissions" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 2[0m
+  [1m[35mProject Load (0.2ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 111ms (Views: 9.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:20 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" ORDER BY email
+  Rendered admin/users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:22 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:23 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:24 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:42:26 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 174ms (Views: 73.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /jquery.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /admin/permissions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /admin/users.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /tickets.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:38 -0800
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:40 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:41 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 95ms (Views: 9.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:42 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.2ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:43:44 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:47:54 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  Rendered admin/base/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 186ms (Views: 77.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /admin/permissions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /admin/users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /tickets.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /projects.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:55 -0800
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY email[0m
+  Rendered admin/users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:56 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:57 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 94ms (Views: 8.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:58 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:47:59 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPermission Load (0.1ms)[0m  SELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 9.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:59 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:47:59 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:48:00 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:48:00 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:48:00 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:48:00 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:48:00 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Processing by Admin::BaseController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 47ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:19 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" ORDER BY email
+  Rendered admin/users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:21 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered admin/users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /tickets.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:23 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/base/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:49:25 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/admin/users/1/permissions" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Processing by Admin::PermissionsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPermission Load (0.1ms)[0m  [1mSELECT "permissions".* FROM "permissions" WHERE "permissions"."user_id" = 1[0m
+  [1m[35mProject Load (0.1ms)[0m  SELECT "projects".* FROM "projects" 
+  Rendered admin/permissions/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/permissions.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /admin/permissions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/tickets.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /tickets.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/admin/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /admin/users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/projects.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /projects.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-02-26 20:50:09 -0800
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "permissions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "thing_id" integer, "thing_type" varchar(255), "action" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "projects" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "tickets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "description" text, "project_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer) [0m
+  [1m[35m (1.0ms)[0m  CREATE INDEX "index_tickets_on_project_id" ON "tickets" ("project_id")
+  [1m[36m (1.0ms)[0m  [1mCREATE INDEX "index_tickets_on_user_id" ON "tickets" ("user_id")[0m
+  [1m[35m (1.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "unconfirmed_email" varchar(255), "admin" boolean DEFAULT 'f') 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130224161726')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130120230123')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130204033443')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130209225252')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130209232742')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20130209235950')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130217064114')
