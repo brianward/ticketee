@@ -11,6 +11,7 @@ gem 'devise', '2.1.0.rc'
 gem 'cancan', '1.6.7'
 gem 'paperclip', '2.7.0'
 
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -36,6 +37,8 @@ end
 group :test do
   gem 'capybara', '1.1.2'
   gem 'factory_girl', '2.6.4'
+  gem 'database_cleaner', '0.7.2'
+  gem 'selenium-webdriver','>= 2.5.0'
 end
 
 # To use ActiveModel has_secure_password
