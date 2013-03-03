@@ -45,7 +45,7 @@ feature "Creating Tickets" do
       attach_file "File", "spec/fixtures/speed.txt"
       click_button "Create Ticket"
       page.should have_content("Ticket has been created.")
-      within("#ticket .asset") do
+      within("#ticket .assets") do
         page.should have_content("speed.txt")
       end
     end
