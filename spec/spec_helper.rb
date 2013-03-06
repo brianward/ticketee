@@ -17,6 +17,14 @@ RSpec.configure do |config|
   # config.mock_with :flexmock
   # config.mock_with :rr
 
+  config.before do
+    ActionMailer::Base.deliveries.clear
+  end
+
+  config.include Devise::TestHelpers, :type => :controller
+
+  config.include EmailSpec::Helpers
+
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
@@ -35,15 +43,4 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
-
-  config.include EmailSpec::Helpers
-
-  config.before do
-    ActionMailer::Base.deliveries.clear
-  end
-
-  RSpec.configure do |config|
-    config.include Devise::TestHelpers, :type => :controller
-  end
-
 end

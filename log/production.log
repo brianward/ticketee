@@ -24,3 +24,23 @@ ActiveRecord::RecordNotFound (Couldn't find Project with id=not-here):
   app/controllers/projects_controller.rb:38:in `show'
 
 
+Compiled jquery.js  (3ms)  (pid 22677)
+Compiled jquery_ujs.js  (0ms)  (pid 22677)
+Compiled admin/permissions.js  (122ms)  (pid 22677)
+Compiled admin/users.js  (76ms)  (pid 22677)
+Compiled files.js  (63ms)  (pid 22677)
+Compiled projects.js  (101ms)  (pid 22677)
+Compiled tickets.js  (74ms)  (pid 22677)
+Compiled users.js  (66ms)  (pid 22677)
+Compiled application.js  (606ms)  (pid 22677)
+Compiled application.css  (0ms)  (pid 22677)
+Compiled jquery.js  (2ms)  (pid 22677)
+Compiled jquery_ujs.js  (0ms)  (pid 22677)
+Compiled admin/permissions.js  (105ms)  (pid 22677)
+Compiled admin/users.js  (74ms)  (pid 22677)
+Compiled files.js  (64ms)  (pid 22677)
+Compiled projects.js  (95ms)  (pid 22677)
+Compiled tickets.js  (71ms)  (pid 22677)
+Compiled users.js  (66ms)  (pid 22677)
+Compiled application.js  (545ms)  (pid 22677)
+Compiled application.css  (0ms)  (pid 22677)
