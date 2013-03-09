@@ -35,7 +35,6 @@ feature "Creating comments" do
     select "Open", :from => "State"
     click_button "Create Comment"
     page.should have_content("Comment has been created.")
-    save_and_open_page
     within("#ticket .state") do
       page.should have_content("Open")
     end
